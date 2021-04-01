@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Opencv.js - Edge Detector & Pencil sketch</title>
+  <meta charset="utf-8">
+</head>  
+<body>
+  <section id="cameraSection">
+  <h2 id='status'>opencv.js is loading...</h2>
+  <p> Canny edge detector </p>
+      <div>
+        <input type="text" id="threshold1" placeholder="請輸入threshold1(0~255)" required>
+        <input type="text" id="threshold2" placeholder="請輸入threshold2(0~255)" required>
+        <button id="thresholdButton" disabled>change</button>
+        <p id="alert"></p>
+      </div>
+      <div>
+        <button id="enableWebcamButton" disabled>Open the camera</button>
+        <button id="disableWebcamButton" disabled>Close the camera</button>
+      </div>
+      <div id="liveView">  
+        <video id="webcam" autoplay width="320" height="240"></video>
+        <canvas id="outputCanvas"></canvas>
+      </div>
+  <p> Pencil sketch</p>
+      <div>
+        <button id="enableWebcamButton2" disabled>Open the camera</button>
+        <button id="disableWebcamButton2" disabled>Close the camera</button>
+      </div>
+      <div id="liveView2">
+        <video id="webcam2" autoplay width="320" height="240"></video>  
+        <canvas id="outputCanvas2"></canvas>
+      </div>
+  </section>
+  
+  <script src="camOpencv.js"></script>
+  <script async src="opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+</body>
+</html>
+
